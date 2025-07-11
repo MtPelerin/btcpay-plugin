@@ -1,5 +1,6 @@
 ﻿using BTCPayServer.Abstractions.Contracts;
 using BTCPayServer.Abstractions.Models;
+using BTCPayServer.Abstractions.Plugins;
 using BTCPayServer.Abstractions.Services;
 using BTCPayServer.Plugins.MtPelerin.Services;
 using Microsoft.AspNetCore.Builder;
