@@ -1,6 +1,5 @@
 ﻿using BTCPayServer.Abstractions.Contracts;
 using BTCPayServer.Abstractions.Models;
-using BTCPayServer.Abstractions.Plugins;
 using BTCPayServer.Abstractions.Services;
 using BTCPayServer.Plugins.MtPelerin.Services;
 using Microsoft.AspNetCore.Builder;
@@ -8,9 +7,10 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace BTCPayServer.Plugins.MtPelerin;
 
-[Plugin("BTCPayServer.Plugins.mtpelerin")]
 public class Plugin : BaseBTCPayServerPlugin
 {
+    public override string Identifier => "BTCPayServer.Plugins.mtpelerin";
+
     public override IBTCPayServerPlugin.PluginDependency[] Dependencies { get; } =
     {
         new IBTCPayServerPlugin.PluginDependency { Identifier = nameof(BTCPayServer), Condition = ">=2.0.1" }
