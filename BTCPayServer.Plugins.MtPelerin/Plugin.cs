@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace BTCPayServer.Plugins.MtPelerin;
 
+[Plugin("BTCPayServer.Plugins.mtpelerin")]
 public class Plugin : BaseBTCPayServerPlugin
 {
     public override IBTCPayServerPlugin.PluginDependency[] Dependencies { get; } =
